@@ -1,0 +1,40 @@
+{
+  "definition": {
+    "openapi": "3.0.0",
+    "info": {
+      "title": "Analytic Catalog CRUD APIs",
+      "version": "0.1.0",
+      "description": "CRUD APIs for Analytic Catalog",
+      "license": {
+        "name": "MIT",
+        "url": "https://spdx.org/licenses/MIT.html"
+      },
+      "contact": {
+        "name": "Carlo Serrangeli",
+        "url": "",
+        "email": "carlo.serrangeli@gmail.com"
+      }
+    },
+    "servers": [
+      {
+        "url": "http://localhost:{port}/{basePath}",
+        "description": "The API server",
+        "variables": {
+          "username": {
+            "default": "demo",
+            "description": "this value is assigned by the service provider, in this example `localhost`"
+          },
+          "port": {
+            "enum": ["3000"],
+            "default": "3000"
+          },
+          "basePath": {
+            "default": "items"
+          }
+        }
+      }
+    ]
+  },
+
+  "apis": ["./routes/item.routes.js"]
+}
